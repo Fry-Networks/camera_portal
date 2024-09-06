@@ -70,8 +70,8 @@ export default function Wallet() {
           <div className="flex justify-center items-center gap-4">
             <OpenButton
               showModal={showGmcMapModal}
-              text="Ecowitt Camera"
-              logo="/ecowitt.jpg"
+              text="Camera"
+              logo="/camera.png"
             />
             <RSTPModal
               isOpen={isRSTPModalOpen}
