@@ -22,6 +22,8 @@ export function SubmitRstpButton({
 }) {
   const { activeAddress } = useWallet();
 
+  const isValidMiner = /^([A-Z]{2,6})-[A-Z0-9]{33}$/i.test(minerKey);
+
   const handleGmcSubmit = async (
     
     updateMessage: Function,
@@ -50,9 +52,10 @@ export function SubmitRstpButton({
       onClick={() =>
         handleGmcSubmit( updateMessage,disappearInput,activeAddress!)
       }
-      className='py-4 px-6 text-base font-medium rounded-lg focus:outline-none bg-[#00FFFF] cursor-pointer first-letter'
-        // ${ isValidKeys ? "bg-[#00FFFF] cursor-pointer" : "bg-gray-400 cursor-not-allowed"}
-      // disabled={!isValidKeys}
+      className={`py-4 px-6 text-base font-medium rounded-lg focus:outline-none ${
+        isValidMiner ? "bg-[#00FFFF] cursor-pointer" : "bg-gray-400 cursor-not-allowed"
+      }`}
+      disabled={!isValidMiner}
     >
       Submit
     </button>
