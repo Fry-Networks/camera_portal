@@ -61,7 +61,7 @@ export const RSTPModal: React.FC<IRstpModalProps> = ({
       </div>
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-[25px] mb-4">
-          Please enter Ecowitt Rstp Url:
+        Please enter your camera's public RTSP URL
         </h1>
         <RstpUrlKeyInput
           token={rtspUrl}
