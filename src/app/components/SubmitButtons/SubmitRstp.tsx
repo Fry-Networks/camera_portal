@@ -22,7 +22,7 @@ export function SubmitRstpButton({
 }) {
   const { activeAddress } = useWallet();
 
-  const isValidMiner = /^([A-Z]{2,6})-[A-Z0-9]{33}$/i.test(minerKey);
+  const isValidMiner = /^([A-Z]{2,6})-[A-Z0-9]{31,33}$/i.test(minerKey);
 
   const handleGmcSubmit = async (
     
